@@ -10,7 +10,7 @@ on:
       - completed
 
   # Allows to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  workflow_dispatch: null
 
 permissions:
   contents: read
@@ -28,7 +28,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: puzl-ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
